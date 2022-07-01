@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-item href="/screen">
+      <ion-title>Serie A</ion-title>
+    </ion-item>
+    <ion-buttons slot="end">
+      <ion-menu-button menuId="main-menu"> </ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-content>
+      <!-- looping -->
+      <div *ngFor="let r of result">
+        <ion-item href="/{{r.idLeague}}/{{r.idTeam}}" detail>
+          <ion-thumbnail slot="start">
+            <img src="{{r.strTeamBadge}}" />
+          </ion-thumbnail>
+          <ion-label>{{r.strTeam}}</ion-label>
+        </ion-item>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

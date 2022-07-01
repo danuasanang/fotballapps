@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/{{idLeague}}/{{idTeam}}"></ion-back-button>
+    </ion-buttons>
+    <ion-title>5 Pertandingan Terakhir</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button menuId="main-menu"> </ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let r of result">
+    <ion-header class="ion-padding-vertical">
+      <ion-title color="dark">{{ r.strEvent }}</ion-title>
+    </ion-header>
+    <ion-card-content>
+      <img src="{{r.strThumb}}" />
+    </ion-card-content>
+    <ion-row>
+      <ion-col size="4" class="ion-text-end">{{r.strHomeTeam}}</ion-col>
+      <ion-col size="4">
+        <center>{{r.intHomeScore}} - {{r.intAwayScore}}</center>
+      </ion-col>
+      <ion-col size="4">{{r.strAwayTeam}}</ion-col>
+      <ion-col size="12">
+        <center>{{ r.strVenue }}</center>
+        <center>{{r.dateEvent | date:'d MMMM y'}}  {{ r.strTimeLocal }}</center>
+        <br />
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>

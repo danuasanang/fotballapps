@@ -1,0 +1,106 @@
+<style>
+  ion-thumbnail {
+    width: 100px;
+    height: 100px;
+  }
+</style>
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <div *ngIf="idLeague == 4328">
+        <ion-back-button defaultHref="/epl"></ion-back-button>
+      </div>
+      <div *ngIf="idLeague == 4334">
+        <ion-back-button defaultHref="/ligue1"></ion-back-button>
+      </div>
+      <div *ngIf="idLeague == 4335">
+        <ion-back-button defaultHref="/laliga"></ion-back-button>
+      </div>
+      <div *ngIf="idLeague == 4332">
+        <ion-back-button defaultHref="/serie-a"></ion-back-button>
+      </div>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-menu-button menuId="main-menu"> </ion-menu-button>
+    </ion-buttons>
+    <ion-title> {{namaTim}} </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br /><br />
+  <center>
+    <ion-thumbnail>
+      <img src="{{logo}}" />
+    </ion-thumbnail>
+  </center>
+  <br />
+  <ion-item-divider>
+    <ion-col size="6"></ion-col>
+    <ion-col size="6"></ion-col>
+  </ion-item-divider>
+  <ion-item-divider>
+    <ion-col size="6">Nama Tim</ion-col>
+    <ion-col size="6">{{namaTim}}</ion-col>
+  </ion-item-divider>
+  <ion-item-divider>
+    <ion-col size="6">Nama Lain</ion-col>
+    <ion-col size="6">{{namaLain}}</ion-col>
+  </ion-item-divider>
+  <ion-item-divider>
+    <ion-col size="6">Tahun Berdiri</ion-col>
+    <ion-col size="6">{{born}}</ion-col>
+  </ion-item-divider>
+  <ion-item-divider>
+    <ion-col size="6">Negara</ion-col>
+    <ion-col size="6">{{negara}}</ion-col>
+  </ion-item-divider>
+  <ion-item-divider>
+    <ion-col size="6">Kompetisi</ion-col>
+    <ion-col size="6">{{liga}}</ion-col>
+  </ion-item-divider>
+  <ion-item-divider>
+    <ion-col size="6">Nama Stadium</ion-col>
+    <ion-col size="6">{{stadium}}</ion-col>
+  </ion-item-divider>
+  <ion-item-divider>
+    <ion-col size="6">Kapasitas Stadium</ion-col>
+    <ion-col size="6">{{kapasitas}}</ion-col>
+  </ion-item-divider>
+  <ion-item-divider>
+    <ion-col size="6">Alamat Website</ion-col>
+    <ion-col size="6">{{website}}</ion-col>
+  </ion-item-divider>
+  <ion-item-divider>
+    <ion-col size="6">Alamat Facebook</ion-col>
+    <ion-col size="6">{{fb}}</ion-col>
+  </ion-item-divider>
+  <ion-item-divider>
+    <ion-col size="6">Alamat Instagram</ion-col>
+    <ion-col size="6">{{ig}}</ion-col>
+  </ion-item-divider>
+  <ion-item-divider>
+    <ion-col size="6">Alamat Twitter</ion-col>
+    <ion-col size="6">{{twitter}}</ion-col>
+  </ion-item-divider>
+  <ion-item-divider>
+    <ion-col size="6">Alamat Youtube</ion-col>
+    <ion-col size="6">{{yt}}</ion-col>
+  </ion-item-divider>
+  <ion-item-divider>
+    <ion-col size="6">Alamat Rss</ion-col>
+    <ion-col size="6">{{rss}}</ion-col>
+  </ion-item-divider>
+  <ion-item-divider>
+    <ion-col size="6">Hasil Pertandingan</ion-col>
+    <ion-col size="6"
+      ><ion-router-link color="primary" href="{{idLeague}}/{{idTeam}}/result"
+        >Lihat selengkapnya...</ion-router-link
+      ></ion-col
+    >
+  </ion-item-divider>
+  <br />
+  <ion-item-divider>
+    <ion-col size="12">{{deskripsi}}</ion-col>
+  </ion-item-divider>
+</ion-content>
